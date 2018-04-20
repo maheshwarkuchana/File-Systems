@@ -22,14 +22,10 @@ int main()
 	char fname[MAX_FNAME_LENGTH];
 	//int filesize[MAX_FD];
 	int filesize;
-	//char fname[MAX_FNAME_LENGTH);
 	int error_count = 0;
 	int tmp;
 	int sel;
-	//int chunksize;
 	char character;
-	//printf("do you want to create another file system : \n 0. old_file  \n 1. new_file");
-	//scanf("%d ",&sel);
 	mksfs(1);
 	while(1)
 	{
@@ -46,10 +42,7 @@ int main()
 				printf("enter the name of the file : ");
 				scanf("%s",fname);
 				fds = sfs_open(fname);
-				//if((buffer = malloc(strlen(fname))) == NULL)
-				//{
-					//printf("error assigning some memory " );
-				//}
+		
 				if(fds < 0)
 				{
 					fprintf(stderr, "Error: creating file %s",fname);
@@ -58,7 +51,6 @@ int main()
 				{
 					printf("file created succesfully \n");
 				}
-				//sfs_write(fds,fname,strlen(fname));
 				break;
 				
 				
